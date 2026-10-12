@@ -48,6 +48,7 @@ Résultat = 200.0
 
 <img width="953" height="197" alt="Capture d&#39;écran 2026-10-12 112346" src="https://github.com/user-attachments/assets/c064fbb0-f095-4d29-8993-c17a5d7f72df" />
 
+Avec @Autowired seul, Spring injecte DaoImpl (le bean “dao”, qui correspond au nom du champ) et le programme affiche Résultat = 200.0.
 
 ## Résultat avec DaoImpl2 (après @Qualifier)
 
@@ -70,6 +71,7 @@ Résultat = 300.0
 #L'execution
 <img width="1098" height="216" alt="Capture d&#39;écran 2026-10-12 112922" src="https://github.com/user-attachments/assets/794b2fec-1cd7-4a32-9cda-19edda12dd4a" />
 
+Avec @Qualifier("dao2"), Spring injecte DaoImpl2 à la place et le programme affiche Résultat = 300.0.
 
 Pour changer d'implémentation, il suffit de modifier le nom dans `@Qualifier`, sans toucher au reste du code. C'est tout l'intérêt de l'injection de dépendances.
 
